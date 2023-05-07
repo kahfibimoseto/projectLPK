@@ -3,10 +3,10 @@ import streamlit as st
 st.title(':green[KIMIA ANALITIK : VOLUMETRI]')
 st.markdown("Ini adalah Aplikasi Percepatan Perhitungan Untuk Analis Kimia")
 st.write('''Aplikasi ini dibuat oleh Kelompok X dari kelas IB Analis Kimia beranggotakan
-1. Ika
-2. Kahfi
-3. Nabila 
-4. Retno 
+1. Ika Septiana (2219083)
+2. Kahfi Akmal J.B.S (2219089)
+3. Nabila Azzahra K. (2219120)
+4. Retno Dwi A. (2219120)
 ''')
 
 tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Halaman Utama', 'Molaritas', 'Normalitas', 'ppm', 'Persen Berat', 'Persen Volume', 'Informasi Titrasi'])
