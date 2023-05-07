@@ -14,7 +14,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Halaman Utama', 'Molaritas'
 with tab1:
     st.header("Selamat Datang")
     st.markdown("Gunakan tabel berat molekul dibawah ini untuk bahan yang anda gunakan")
-    st.image('github.com/kahfibimoseto/projectLPK/blob/main/tabelBM.png')
+    st.image('https://github.com/kahfibimoseto/projectLPK/blob/main/tabelBM.png')
     st.caption('_gunakan literatur bila data yang anda butuhkan tidak ada di tabel_')
      
 with tab2:
