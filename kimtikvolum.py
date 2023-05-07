@@ -15,7 +15,11 @@ with tab1:
     st.header("Selamat Datang")
     st.markdown("Gunakan tabel berat molekul dibawah ini untuk bahan yang anda gunakan")
     st.image('https://github.com/kahfibimoseto/projectLPK/blob/main/tabelBM.png')
-    st.caption('_gunakan literatur bila data yang anda butuhkan tidak ada di tabel_')
+    st.caption('''
+    _gunakan literatur bila data yang anda butuhkan tidak ada di tabel_
+    
+    __abaikan jika ada pesan eror dibawah ini__
+    ''')
      
 with tab2:
     st.header("Molaritas")
