@@ -14,7 +14,7 @@ tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Halaman Utama', 'Molaritas'
 with tab1:
     st.header("Selamat Datang")
     st.markdown("Gunakan tabel berat molekul dibawah ini untuk bahan yang anda gunakan")
-    st.image('tabelBM.png')
+    st.image(tabelBM.png)
     st.caption('''
     _gunakan literatur bila data yang anda butuhkan tidak ada di tabel_
     
@@ -100,8 +100,8 @@ with tab7:
         :violet[_Informasi Penggunaan Bahan Primer_]
         ''')
         namaprimerab=st.text_input("Bahan Standar Baku Primer Asam Basa")
-        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=None, max_value=None)
-        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=None, max_value=None)
+        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=0,0001, max_value=None)
+        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=1, max_value=None)
         volumeprimerab=st.number_input("Volume Labu Takar(L)"min_value=None, max_value=None)
         
         if st.button('Konsentrasi Standar Primer'):
