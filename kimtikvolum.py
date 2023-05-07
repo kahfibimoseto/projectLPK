@@ -107,7 +107,7 @@ with tab7:
         if st.button('Konsentrasi Standar Primer'):
             cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
             st.info(f'Konsentrasi dari {namaprimerab}: {cprimerab}')
-        cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
+            cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
         st.divider()
     
         st.write('''
