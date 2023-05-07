@@ -103,10 +103,11 @@ with tab7:
         massaprimerab=st.number_input("Massa Standar Baku Primer(g)")
         bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer")
         volumeprimerab=st.number_input("Volume Labu Takar(L)")
-        cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
+        
         if st.button('Konsentrasi Standar Primer'):
             cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
             st.info(f'Konsentrasi dari {namaprimerab}: {cprimerab}')
+        cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
         st.divider()
     
         st.write('''
