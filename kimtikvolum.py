@@ -100,8 +100,8 @@ with tab7:
         :violet[_Informasi Penggunaan Bahan Primer_]
         ''')
         namaprimerab=st.text_input("Bahan Standar Baku Primer Asam Basa")
-        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=00001, max_value=None)
-        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=01, max_value=None)
+        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=0.0001, max_value=None)
+        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=0.1, max_value=None)
         volumeprimerab=st.number_input("Volume Labu Takar(L)"min_value=None, max_value=None)
         
         if st.button('Konsentrasi Standar Primer'):
