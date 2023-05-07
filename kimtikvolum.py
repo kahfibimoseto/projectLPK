@@ -19,8 +19,6 @@ with tab1:
     st.image(image)
     st.caption('''
     _gunakan literatur bila data yang anda butuhkan tidak ada di tabel_
-    
-    __abaikan jika ada pesan eror dibawah ini__
     ''')
      
 with tab2:
