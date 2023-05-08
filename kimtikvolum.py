@@ -1,5 +1,12 @@
 import streamlit as st
 
+[theme]
+primaryColor="#FF4B4B"
+backgroundColor="#0E1117"
+secondaryBackgroundColor="#262730"
+textColor="#FAFAFA"
+font="sans serif"
+
 st.title(':green[KIMIA ANALITIK : VOLUMETRI]')
 st.markdown("Ini adalah Aplikasi Percepatan Perhitungan Untuk Analis Kimia")
 st.write('''Aplikasi ini dibuat oleh Kelompok 11 dari kelas IB Analis Kimia beranggotakan:
