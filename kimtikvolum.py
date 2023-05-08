@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title(':green[KIMIA ANALITIK : VOLUMETRI]')
 st.markdown("Ini adalah Aplikasi Percepatan Perhitungan Untuk Analis Kimia")
-st.write('''Aplikasi ini dibuat oleh Kelompok 11 dari kelas IB Analis Kimia beranggotakan
+st.write('''Aplikasi ini dibuat oleh Kelompok 11 dari kelas IB Analis Kimia beranggotakan:
 1. Ika Septiana (2219083)
 2. Kahfi Akmal J.B.S (2219089)
 3. Nabila Azzahra K. (2219120)
@@ -102,7 +102,7 @@ with tab7:
         namaprimerab=st.text_input("Bahan Standar Baku Primer Asam Basa")
         massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=0.0001, max_value=None)
         bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=0.1, max_value=None)
-        volumeprimerab=st.number_input("Volume Labu Takar(L)", min_value=50, max_value=None)
+        volumeprimerab=st.number_input("Volume Labu Takar(L)", min_value=0.01, max_value=None)
         
         if st.button('Konsentrasi Standar Primer'):
             cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
@@ -139,7 +139,7 @@ with tab7:
             namaprimerio=st.text_input("Bahan Standar Baku Primer Iodometri")
             massaprimerio=st.number_input("Massa Standar Baku Primer(g) Iodometri", min_value=0.0001, max_value=None)
             bmbeprimerio=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Iodometri", min_value=0.1, max_value=None)
-            volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=50, max_value=None)
+            volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=0.01, max_value=None)
        
             cprimerio=((massaprimerio)/(bmbeprimerio))/(volumeprimerio)
         
@@ -179,7 +179,7 @@ with tab7:
             namaprimermn=st.text_input("Bahan Standar Baku Primer Permanganometri")
             massaprimermn=st.number_input("Massa Standar Baku Primer Permanganometri(g)", min_value=0.0001, max_value=None)
             bmbeprimermn=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Permanganometri", min_value=0.1, max_value=None)
-            volumeprimermn=st.number_input("Volume Labu Takar(L) Permanganometri", min_value=50, max_value=None)
+            volumeprimermn=st.number_input("Volume Labu Takar(L) Permanganometri", min_value=0.01, max_value=None)
             
             cprimermn=((massaprimermn)/(bmbeprimermn))/(volumeprimermn)
         
@@ -218,7 +218,7 @@ with tab7:
             namaprimerag=st.text_input("Bahan Standar Baku Primer Argentometri")
             massaprimerag=st.number_input("Massa Standar Baku Primer(g) Argentometri", min_value=0.0001, max_value=None)
             bmbeprimerag=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Argentometri", min_value=0.1, max_value=None)
-            volumeprimerag=st.number_input("Volume Labu Takar(L) Argentometri", min_value=50, max_value=None)
+            volumeprimerag=st.number_input("Volume Labu Takar(L) Argentometri", min_value=0.01, max_value=None)
         
             cprimerag=((massaprimerag)/(bmbeprimerag))/(volumeprimerag)
         
@@ -257,7 +257,7 @@ with tab7:
             namaprimerko=st.text_input("Bahan Standar Baku Primer Kompleksometri")
             massaprimerko=st.number_input("Massa Standar Baku Primer(g) Kompleksometri", min_value=0.0001, max_value=None)
             bmbeprimerko=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Kompleksometri", min_value=0.1, max_value=None)
-            volumeprimerko=st.number_input("Volume Labu Takar(L)Kompleksometri", min_value=50, max_value=None)
+            volumeprimerko=st.number_input("Volume Labu Takar(L)Kompleksometri", min_value=0.01, max_value=None)
         
             cprimerko=((massaprimerko)/(bmbeprimerko))/(volumeprimerko)
         
