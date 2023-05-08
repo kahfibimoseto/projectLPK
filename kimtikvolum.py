@@ -9,7 +9,7 @@ st.write('''Aplikasi ini dibuat oleh Kelompok 11 dari kelas IB Analis Kimia bera
 4. Retno Dwi A. (2219120)
 ''')
 
-tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs(['Halaman Utama', 'Molaritas', 'Normalitas', 'ppm', 'Persen Berat', 'Persen Volume', 'Informasi Titrasi'])
+tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8 = st.tabs(['Halaman Utama', 'Molaritas', 'Normalitas', 'ppm', 'Persen Berat', 'Persen Volume', 'Persen b/v', 'Informasi Titrasi'])
 
 with tab1:
     st.header("Selamat Datang")
@@ -30,7 +30,7 @@ with tab2:
     volumbahan=st.number_input("Volume Larutan(mL) Molaritas")
     if st.button('Molaritas'):
         molaritas=((jmlbahan)/(bmmolar))/(volumbahan)
-        st.info(f'Molaritas dari {namabahan}: {molaritas}')
+        st.info(f'Molaritas dari {namabahan}: {molaritas} M ; (mol/L) ; (mmol/mL)')
     
 with tab3:
     st.header("Normalitas")
@@ -41,7 +41,7 @@ with tab3:
     volumbahan=st.number_input("Volume Larutan(mL) Normalitas")
     if st.button('Normalitas'):
         normalitas=((jmlbahan)/(benormal))/(volumbahan)
-        st.info(f'Molaritas dari {namabahan}: {normalitas}')
+        st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)')
     
 with tab4:
     st.header("ppm")
@@ -51,7 +51,7 @@ with tab4:
     vbahan=st.number_input("Volume Larutan(L)")
     if st.button('ppm'):
         ppm=((jmlbahan)*1000)/(vbahan)
-        st.info(f'ppm dari {namabahan}: {ppm}')
+        st.info(f'ppm dari {namabahan}: {ppm} ppm ; (mg/L)')
 
 with tab5:
     st.header("Persen Berat")
@@ -61,7 +61,7 @@ with tab5:
     beratlar=st.number_input("Berat Larutan(g)")
     if st.button('Persen Berat'):
         pberat=((beratbahan)/(beratlar)*100)
-        st.info(f'Persen Berat dari {namabahan}: {pberat}')
+        st.info(f'Persen Berat dari {namabahan}: {pberat}% (b/b)')
 
 with tab6:
     st.header("Persen Volume")
@@ -71,9 +71,19 @@ with tab6:
     volumebahan=st.number_input("VolumeLarutan(L)")
     if st.button('Persen Volume'):
         pvolume=((volumebahan)/(volumebahan)*100)
-        st.info(f'Persen Volume dari {namabahan}: {pvolume}')
+        st.info(f'Persen Volume dari {namabahan}: {pvolume}% (v/V)')
         
 with tab7:
+    st.header("Persen Berat per Volume")
+    st.markdown("DATA BAHAN")
+    bahan=st.text_input("Nama Bahan Persen b/v")
+    massbahan=st.number_input("Massa Bahan(g) b/v")
+    volbahan=st.number_input("Volume Bahan b/v")
+    if st.button('Persen Berat per Volume'):
+        bv=((massbahan)/(volbahan)*100)
+        st.info(f'Persen Berat per Volume dari {bahan}: {bv}% (b/V))
+        
+with tab8:
     import streamlit as st
     
     st.header("TITRASI KONVENSIONAL")
@@ -113,12 +123,13 @@ with tab7:
         st.write('''
         :violet[_Informasi Titrasi_]
         ''')
+        titranab=st.write_input("Nama Titran Asam Basa")
         volumetitranab=st.number_input("Volume Titran(mL)")
         volumepipetab=st.number_input("Volume Standar Yang Dipipet(mL)")
         f'konsentrasi larutan baku primer {namaprimerab} : {cprimerab}'
         if st.button('hasil titrasi'):
             csampelab=(cprimerab*volumepipetab)/(volumetitranab)
-            st.info(f'Kadar Hasil Titrasi : {csampelab}')
+            st.info(f'Kadar Hasil Titrasi {titranab}: {csampelab}')
 #Iodometri    
     elif option=='Iodometri':
             st.header("Iodometri")
@@ -156,7 +167,7 @@ with tab7:
             f'konsentrasi larutan baku primer {namaprimerio} : {cprimerio}'
             if st.button('hasil titrasi iodo'):
                 csampelio=(cprimerio*volumepipetio)/(volumetitranio)
-                st.info(f'Kadar Hasil Titrasi : {csampelio}')
+                st.info(f'Kadar Hasil Titrasi Natrium Tiosulfat : {csampelio}')
 #Permanganometri                
     elif option=='Permanganometri':
             st.header("Permanganometri")
@@ -196,7 +207,7 @@ with tab7:
             f'konsentrasi larutan baku primer {namaprimermn} : {cprimermn}'
             if st.button('hasil titrasi permangano'):
                 csampelmn=(cprimermn*volumepipetmn)/(volumetitranmn)
-                st.info(f'Kadar Hasil Titrasi : {csampelmn}')
+                st.info(f'Kadar Hasil Titrasim Kalium Permanganat : {csampelmn}')
 #Argentometri            
     elif option=='Argentometri':
             st.header("Argentometri")
@@ -235,7 +246,7 @@ with tab7:
             f'konsentrasi larutan baku primer {namaprimerag} : {cprimerag}'
             if st.button('hasil titrasi'):
                 csampelag=(cprimerag*volumepipetag)/(volumetitranag)
-                st.info(f'Kadar Hasil Titrasi : {csampelag}')
+                st.info(f'Kadar Hasil Titrasi Perak (I) Nitrat : {csampelag}')
 #Kompleksometri        
     elif option=='Kompleksometri':
             st.header("Kompleksometri")
@@ -274,7 +285,7 @@ with tab7:
             f'konsentrasi larutan baku primer {namaprimerko} : {cprimerko}'
             if st.button('hasil titrasi'):
                 csampelko=(cprimerko*volumepipetko)/(volumetitranko)
-                st.info(f'Kadar Hasil Titrasi : {csampelko}')
+                st.info(f'Kadar Hasil Titrasi EDTA : {csampelko}')
         
     else:
           print("batal")
