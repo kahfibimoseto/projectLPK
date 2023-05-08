@@ -1,5 +1,5 @@
 import streamlit as st
-
+import base64
 main_bg = "ijobg.jpg"
 main_bg_ext = "jpg"
 
