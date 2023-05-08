@@ -2,7 +2,7 @@ import streamlit as st
 
 st.title(':green[KIMIA ANALITIK : VOLUMETRI]')
 st.markdown("Ini adalah Aplikasi Percepatan Perhitungan Untuk Analis Kimia")
-st.write('''Aplikasi ini dibuat oleh Kelompok X dari kelas IB Analis Kimia beranggotakan
+st.write('''Aplikasi ini dibuat oleh Kelompok 11 dari kelas IB Analis Kimia beranggotakan
 1. Ika Septiana (2219083)
 2. Kahfi Akmal J.B.S (2219089)
 3. Nabila Azzahra K. (2219120)
