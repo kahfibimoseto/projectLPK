@@ -123,13 +123,13 @@ with tab8:
         st.write('''
         :violet[_Informasi Titrasi_]
         ''')
-        titranab=st.write_input("Nama Titran Asam Basa")
+        titranasba=st.write_input("Nama Titran Asam Basa")
         volumetitranab=st.number_input("Volume Titran(mL)")
         volumepipetab=st.number_input("Volume Standar Yang Dipipet(mL)")
         f'konsentrasi larutan baku primer {namaprimerab} : {cprimerab}'
         if st.button('hasil titrasi'):
             csampelab=(cprimerab*volumepipetab)/(volumetitranab)
-            st.info(f'Kadar Hasil Titrasi {titranab}: {csampelab}')
+            st.info(f'Kadar Hasil Titrasi {titranasba}: {csampelab}')
 #Iodometri    
     elif option=='Iodometri':
             st.header("Iodometri")
