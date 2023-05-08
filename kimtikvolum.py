@@ -1,6 +1,6 @@
 import streamlit as st
 
-theme
+#theme
 primaryColor="#7AAB87"
 backgroundColor="#5C9885"
 secondaryBackgroundColor="#458480"
