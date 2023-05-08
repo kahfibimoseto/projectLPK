@@ -1,11 +1,18 @@
 import streamlit as st
 
-#theme
-primaryColor="#7AAB87"
-backgroundColor="#5C9885"
-secondaryBackgroundColor="#458480"
-textColor="#FAFAFA"
-font="sans serif"
+main_bg = "ijobg.jpg"
+main_bg_ext = "jpg"
+
+st.markdown(
+    f"""
+    <style>
+    .reportview-container {{
+        background: url(data:image/{main_bg_ext};base64,{base64.b64encode(open(main_bg, "rb").read()).decode()})
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
 
 st.title(':green[KIMIA ANALITIK : VOLUMETRI]')
 st.markdown("Ini adalah Aplikasi Percepatan Perhitungan Untuk Analis Kimia")
