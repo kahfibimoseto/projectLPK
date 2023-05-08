@@ -123,7 +123,7 @@ with tab8:
         st.write('''
         :violet[_Informasi Titrasi_]
         ''')
-        
+        titranasba=st.write_input("Nama Titran Asam Basa")
         volumetitranab=st.number_input("Volume Titran(mL)")
         volumepipetab=st.number_input("Volume Standar Yang Dipipet(mL)")
         f'konsentrasi larutan baku primer {namaprimerab} : {cprimerab}'
