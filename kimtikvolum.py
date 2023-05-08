@@ -81,7 +81,7 @@ with tab7:
     volbahan=st.number_input("Volume Bahan b/v")
     if st.button('Persen Berat per Volume'):
         bv=((massbahan)/(volbahan)*100)
-        st.info(f'Persen Berat per Volume dari {bahan}: {bv}% (b/V))
+        st.info(f'Persen Berat per Volume dari {bahan}: {bv}% (b/V)')
         
 with tab8:
     import streamlit as st
