@@ -50,7 +50,7 @@ with tab4:
     jmlbahan=st.number_input("Jumlah Bahan(g) ppm", format = "%.4f")
     vbahan=st.number_input("Volume Larutan(L)", format = "%.3f")
     if st.button('ppm'):
-        ppm=((jmlbahan)*1000)/(vbahan)
+        ppm=round(((jmlbahan)*1000)/(vbahan),4)
         st.info(f'ppm dari {namabahan}: {ppm} ppm ; (mg/L)')
 
 with tab5:
