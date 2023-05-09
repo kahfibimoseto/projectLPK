@@ -245,7 +245,7 @@ with tab8:
             volumepipetag=st.number_input("Volume Standar Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimerag} : {cprimerag}'
             if st.button('hasil titrasi'):
-                csampelag=(cprimerag*volumepipetag)/(volumetitranag)
+                csampelag=round((cprimerag*volumepipetag)/(volumetitranag),6)
                 st.info(f'Kadar Hasil Titrasi Perak (I) Nitrat : {csampelag}')
 #Kompleksometri        
     elif option=='Kompleksometri':
@@ -270,21 +270,21 @@ with tab8:
             bmbeprimerko=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Kompleksometri", min_value=0.1, max_value=None, format = "%.1f")
             volumeprimerko=st.number_input("Volume Labu Takar(L)Kompleksometri", min_value=0.01, max_value=None, format = "%.3f")
         
-            cprimerko=((massaprimerko)/(bmbeprimerko))/(volumeprimerko)
+            cprimerko=round(((massaprimerko)/(bmbeprimerko))/(volumeprimerko),6)
         
             if st.button('Konsentrasi Standar Primer'):
-                cprimerko=((massaprimerko)/(bmbeprimerko))/(volumeprimerko)
+                cprimerko=round(((massaprimerko)/(bmbeprimerko))/(volumeprimerko),6)
                 st.info(f'Konsentrasi dari {namaprimerko}: {cprimerko}')
             st.divider()
         
             st.write('''
             :violet[_Informasi Titrasi_]
             ''')
-            volumetitranko=st.number_input("Volume Titran(mL)")
+            volumetitranko=st.number_input("Volume Titran(mL)", format="%.3f")
             volumepipetko=st.number_input("Volume Standar Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimerko} : {cprimerko}'
             if st.button('hasil titrasi'):
-                csampelko=(cprimerko*volumepipetko)/(volumetitranko)
+                csampelko=round((cprimerko*volumepipetko)/(volumetitranko),6)
                 st.info(f'Kadar Hasil Titrasi EDTA : {csampelko}')
         
     else:
