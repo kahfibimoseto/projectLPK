@@ -26,8 +26,8 @@ with tab2:
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Molaritas")
     jmlbahan=st.number_input("Jumlah Bahan(g) Molaritas", format = "%.4f")
-    bmmolar=st.number_input("Masukkan BM/Ar Bahan")
-    volumbahan=st.number_input("Volume Larutan(mL) Molaritas")
+    bmmolar=st.number_input("Masukkan BM/Ar Bahan", format = "%.1f")
+    volumbahan=st.number_input("Volume Larutan(mL) Molaritas", format = "%.3f")
     if st.button('Molaritas'):
         molaritas=((jmlbahan)/(bmmolar))/(volumbahan)
         st.info(f'Molaritas dari {namabahan}: {molaritas} M ; (mol/L) ; (mmol/mL)')
@@ -37,8 +37,8 @@ with tab3:
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Normalitas")
     jmlbahan=st.number_input("Jumlah Bahan(g) Normalitas", format = "%.4f")
-    benormal=st.number_input("Masukkan BE Bahan")
-    volumbahan=st.number_input("Volume Larutan(mL) Normalitas")
+    benormal=st.number_input("Masukkan BE Bahan", format = "%.1f")
+    volumbahan=st.number_input("Volume Larutan(mL) Normalitas", format = "%.3f")
     if st.button('Normalitas'):
         normalitas=((jmlbahan)/(benormal))/(volumbahan)
         st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)')
@@ -48,7 +48,7 @@ with tab4:
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan ppm")
     jmlbahan=st.number_input("Jumlah Bahan(g) ppm", format = "%.4f")
-    vbahan=st.number_input("Volume Larutan(L)")
+    vbahan=st.number_input("Volume Larutan(L)", format = "%.3f")
     if st.button('ppm'):
         ppm=((jmlbahan)*1000)/(vbahan)
         st.info(f'ppm dari {namabahan}: {ppm} ppm ; (mg/L)')
@@ -58,7 +58,7 @@ with tab5:
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Persen Berat")
     beratbahan=st.number_input("Berat Bahan(g)", format = "%.4f")
-    beratlar=st.number_input("Berat Larutan(g)")
+    beratlar=st.number_input("Berat Larutan(g)", format = "%.4f")
     if st.button('Persen Berat'):
         pberat=((beratbahan)/(beratlar)*100)
         st.info(f'Persen Berat dari {namabahan}: {pberat}% (b/b)')
@@ -67,8 +67,8 @@ with tab6:
     st.header("Persen Volume")
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Persen Volume")
-    volumebahan=st.number_input("Volume Bahan(mL)")
-    volumebahan=st.number_input("VolumeLarutan(L)")
+    volumebahan=st.number_input("Volume Bahan(mL)", format = "%.3f")
+    volumebahan=st.number_input("VolumeLarutan(L)"), format = "%.3f"
     if st.button('Persen Volume'):
         pvolume=((volumebahan)/(volumebahan)*100)
         st.info(f'Persen Volume dari {namabahan}: {pvolume}% (v/V)')
@@ -78,7 +78,7 @@ with tab7:
     st.markdown("DATA BAHAN")
     bahan=st.text_input("Nama Bahan Persen b/v")
     massbahan=st.number_input("Massa Bahan(g) b/v", format = "%.4f")
-    volbahan=st.number_input("Volume Bahan b/v")
+    volbahan=st.number_input("Volume Bahan b/v", format = "%.3f")
     if st.button('Persen Berat per Volume'):
         bv=((massbahan)/(volbahan)*100)
         st.info(f'Persen Berat per Volume dari {bahan}: {bv}% (b/V)')
@@ -110,9 +110,9 @@ with tab8:
         :violet[_Informasi Penggunaan Bahan Primer_]
         ''')
         namaprimerab=st.text_input("Bahan Standar Baku Primer Asam Basa")
-        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=0.0001, max_value=None)
-        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=0.1, max_value=None)
-        volumeprimerab=st.number_input("Volume Labu Takar(L)", min_value=0.01, max_value=None)
+        massaprimerab=st.number_input("Massa Standar Baku Primer(g)", min_value=0.0001, max_value=None, format = "%.4f")
+        bmbeprimerab=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer", min_value=0.1, max_value=None, format = "%.1f")
+        volumeprimerab=st.number_input("Volume Labu Takar(L)", min_value=0.01, max_value=None, format = "%.3f")
         
         if st.button('Konsentrasi Standar Primer'):
             cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
@@ -149,8 +149,8 @@ with tab8:
             st.write(':violet[_Informasi Penggunaan Bahan Primer_]')
             namaprimerio=st.text_input("Bahan Standar Baku Primer Iodometri")
             massaprimerio=st.number_input("Massa Standar Baku Primer(g) Iodometri", min_value=0.0001, max_value=None, format = "%.4f")
-            bmbeprimerio=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Iodometri", min_value=0.1, max_value=None)
-            volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=0.01, max_value=None)
+            bmbeprimerio=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Iodometri", min_value=0.1, max_value=None, format = "%.1f")
+            volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=0.01, max_value=None, format = "%.3f")
        
             cprimerio=((massaprimerio)/(bmbeprimerio))/(volumeprimerio)
         
@@ -189,8 +189,8 @@ with tab8:
             ''')
             namaprimermn=st.text_input("Bahan Standar Baku Primer Permanganometri")
             massaprimermn=st.number_input("Massa Standar Baku Primer Permanganometri(g)", min_value=0.0001, max_value=None, format = "%.4f")
-            bmbeprimermn=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Permanganometri", min_value=0.1, max_value=None)
-            volumeprimermn=st.number_input("Volume Labu Takar(L) Permanganometri", min_value=0.01, max_value=None)
+            bmbeprimermn=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Permanganometri", min_value=0.1, max_value=None, format = "%.1f")
+            volumeprimermn=st.number_input("Volume Labu Takar(L) Permanganometri", min_value=0.01, max_value=None, format = "%.3f")
             
             cprimermn=((massaprimermn)/(bmbeprimermn))/(volumeprimermn)
         
@@ -228,8 +228,8 @@ with tab8:
             ''')
             namaprimerag=st.text_input("Bahan Standar Baku Primer Argentometri")
             massaprimerag=st.number_input("Massa Standar Baku Primer(g) Argentometri", min_value=0.0001, max_value=None, format = "%.4f")
-            bmbeprimerag=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Argentometri", min_value=0.1, max_value=None)
-            volumeprimerag=st.number_input("Volume Labu Takar(L) Argentometri", min_value=0.01, max_value=None)
+            bmbeprimerag=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Argentometri", min_value=0.1, max_value=None, format = "%.1f")
+            volumeprimerag=st.number_input("Volume Labu Takar(L) Argentometri", min_value=0.01, max_value=None, format = "%.3f")
         
             cprimerag=((massaprimerag)/(bmbeprimerag))/(volumeprimerag)
         
@@ -267,8 +267,8 @@ with tab8:
             ''')
             namaprimerko=st.text_input("Bahan Standar Baku Primer Kompleksometri")
             massaprimerko=st.number_input("Massa Standar Baku Primer(g) Kompleksometri", min_value=0.0001, max_value=None, format = "%.4f")
-            bmbeprimerko=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Kompleksometri", min_value=0.1, max_value=None)
-            volumeprimerko=st.number_input("Volume Labu Takar(L)Kompleksometri", min_value=0.01, max_value=None)
+            bmbeprimerko=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Kompleksometri", min_value=0.1, max_value=None, format = "%.1f")
+            volumeprimerko=st.number_input("Volume Labu Takar(L)Kompleksometri", min_value=0.01, max_value=None, format = "%.3f")
         
             cprimerko=((massaprimerko)/(bmbeprimerko))/(volumeprimerko)
         
