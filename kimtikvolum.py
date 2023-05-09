@@ -27,7 +27,7 @@ with tab2:
     namabahan=st.text_input("Nama Bahan Molaritas")
     jmlbahan=st.number_input("Jumlah Bahan(g) Molaritas", format = "%.4f")
     bmmolar=st.number_input("Masukkan BM/Ar Bahan", format = "%.1f")
-    volumbahan=st.number_input("Volume Larutan(mL) Molaritas", format = "%.3f")
+    volumbahan=st.number_input("Volume Larutan(L) Molaritas", format = "%.3f")
     if st.button('Molaritas'):
         molaritas=((jmlbahan)/(bmmolar))/(volumbahan)
         st.info(f'Molaritas dari {namabahan}: {molaritas} M ; (mol/L) ; (mmol/mL)')
@@ -68,7 +68,7 @@ with tab6:
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Persen Volume")
     volumebahan=st.number_input("Volume Bahan(mL)", format = "%.3f")
-    volumebahan=st.number_input("VolumeLarutan(L)"), format = "%.3f"
+    volumebahan=st.number_input("VolumeLarutan(L)"), format = "%.3f")
     if st.button('Persen Volume'):
         pvolume=((volumebahan)/(volumebahan)*100)
         st.info(f'Persen Volume dari {namabahan}: {pvolume}% (v/V)')
