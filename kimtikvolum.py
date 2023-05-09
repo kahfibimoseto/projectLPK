@@ -67,8 +67,8 @@ with tab6:
     st.header("Persen Volume")
     st.markdown("DATA BAHAN")
     namabahan=st.text_input("Nama Bahan Persen Volume")
-    volumebahan=st.number_input("Volume Bahan(mL)", format = "%.3f")
-    volumebahan=st.number_input("VolumeLarutan(L)", format = "%.3f")
+    volumebahan=st.number_input("Volume Bahan(mL)")
+    volumebahan=st.number_input("VolumeLarutan(L)")
     if st.button('Persen Volume'):
         pvolume=round(((volumebahan)/(volumebahan)*100),6)
         st.info(f'Persen Volume dari {namabahan}: {pvolume}% (v/V)')
