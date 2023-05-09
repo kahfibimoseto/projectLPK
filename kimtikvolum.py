@@ -152,21 +152,21 @@ with tab8:
             bmbeprimerio=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Iodometri", min_value=0.1, max_value=None, format = "%.1f")
             volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=0.01, max_value=None, format = "%.3f")
        
-            cprimerio=((massaprimerio)/(bmbeprimerio))/(volumeprimerio)
+            cprimerio=round(((massaprimerio)/(bmbeprimerio))/(volumeprimerio),6)
         
             if st.button(f'Konsentrasi Standar Primer {namaprimerio}'):
-                    cprimerio=((massaprimerio)/(bmbeprimerio))/(volumeprimerio)
+                    cprimerio=round(((massaprimerio)/(bmbeprimerio))/(volumeprimerio),6)
                     st.info(f'Konsentrasi dari {namaprimerio}: {cprimerio}')
             st.divider()
     
             st.write('''
                 :violet[_Informasi Titrasi_]
                 ''')
-            volumetitranio=st.number_input("Volume Titran Iodometri(mL)")
+            volumetitranio=st.number_input("Volume Titran Iodometri(mL)", format=%.3f")
             volumepipetio=st.number_input(f"Volume {namaprimerio} Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimerio} : {cprimerio}'
             if st.button('hasil titrasi iodo'):
-                csampelio=(cprimerio*volumepipetio)/(volumetitranio)
+                csampelio=round((cprimerio*volumepipetio)/(volumetitranio),6)
                 st.info(f'Kadar Hasil Titrasi Natrium Tiosulfat : {csampelio}')
 #Permanganometri                
     elif option=='Permanganometri':
