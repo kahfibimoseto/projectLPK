@@ -38,10 +38,10 @@ with tab3:
     namabahan=st.text_input("Nama Bahan Normalitas")
     jmlbahan=st.number_input("Jumlah Bahan(g) Normalitas", format = "%.4f")
     benormal=st.number_input("Masukkan BE Bahan", format = "%.1f")
-    volumbahan=st.number_input("Volume Larutan(mL) Normalitas", format = "%.3f")
+    volumbahan=st.number_input("Volume Larutan(L) Normalitas", format = "%.3f")
     if st.button('Normalitas'):
         normalitas=((jmlbahan)/(benormal))/(volumbahan)
-        st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)')
+        st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)', format = "%.5f")
     
 with tab4:
     st.header("ppm")
