@@ -29,7 +29,7 @@ with tab2:
     bmmolar=st.number_input("Masukkan BM/Ar Bahan", format = "%.1f")
     volumbahan=st.number_input("Volume Larutan(L) Molaritas", format = "%.3f")
     if st.button('Molaritas'):
-        molaritas=((jmlbahan)/(bmmolar))/(volumbahan)
+        molaritas=round(((jmlbahan)/(bmmolar))/(volumbahan),5)
         st.info(f'Molaritas dari {namabahan}: {molaritas} M ; (mol/L) ; (mmol/mL)')
     
 with tab3:
