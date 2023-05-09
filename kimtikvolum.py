@@ -40,7 +40,7 @@ with tab3:
     benormal=st.number_input("Masukkan BE Bahan", format = "%.1f")
     volumbahan=st.number_input("Volume Larutan(L) Normalitas", format = "%.3f")
     if st.button('Normalitas'):
-        normalitas=((jmlbahan)/(benormal))/(volumbahan), format=.4.f
+        normalitas=((jmlbahan)/(benormal))/(volumbahan), format="%4.f"
         st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)')
     
 with tab4:
