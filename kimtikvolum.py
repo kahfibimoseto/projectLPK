@@ -41,7 +41,7 @@ with tab3:
     volumbahan=st.number_input("Volume Larutan(L) Normalitas", format = "%.3f")
     if st.button('Normalitas'):
         normalitas=((jmlbahan)/(benormal))/(volumbahan)
-        st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)', format = "%.5f")
+        st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL), format = "%.5f"')
     
 with tab4:
     st.header("ppm")
