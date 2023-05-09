@@ -192,17 +192,17 @@ with tab8:
             bmbeprimermn=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Permanganometri", min_value=0.1, max_value=None, format = "%.1f")
             volumeprimermn=st.number_input("Volume Labu Takar(L) Permanganometri", min_value=0.01, max_value=None, format = "%.3f")
             
-            cprimermn=((massaprimermn)/(bmbeprimermn))/(volumeprimermn)
+            cprimermn=round(((massaprimermn)/(bmbeprimermn))/(volumeprimermn),6)
         
             if st.button(f'Konsentrasi Standar Primer {namaprimermn}'):
-                cprimermn=((massaprimermn)/(bmbeprimermn))/(volumeprimermn)
+                cprimermn=round(((massaprimermn)/(bmbeprimermn))/(volumeprimermn),6)
                 st.info(f'Konsentrasi dari {namaprimermn}: {cprimermn}')
             st.divider()
         
             st.write('''
             :violet[_Informasi Titrasi_]
             ''')
-            volumetitranmn=st.number_input("Volume Titran(mL)")
+            volumetitranmn=st.number_input("Volume Titran(mL)", format="%.3f")
             volumepipetmn=st.number_input("Volume Standar Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimermn} : {cprimermn}'
             if st.button('hasil titrasi permangano'):
