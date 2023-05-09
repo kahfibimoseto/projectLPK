@@ -115,9 +115,9 @@ with tab8:
         volumeprimerab=st.number_input("Volume Labu Takar(L)", min_value=0.01, max_value=None, format = "%.3f")
         
         if st.button('Konsentrasi Standar Primer'):
-            cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
+            cprimerab=round(((massaprimerab)/(bmbeprimerab))/(volumeprimerab),6)
             st.info(f'Konsentrasi dari {namaprimerab}: {cprimerab}')
-        cprimerab=((massaprimerab)/(bmbeprimerab))/(volumeprimerab)
+        cprimerab=round(((massaprimerab)/(bmbeprimerab))/(volumeprimerab),6)
         st.divider()
     
         st.write('''
@@ -128,7 +128,7 @@ with tab8:
         volumepipetab=st.number_input("Volume Standar Yang Dipipet(mL)")
         f'konsentrasi larutan baku primer {namaprimerab} : {cprimerab}'
         if st.button('hasil titrasi'):
-            csampelab=(cprimerab*volumepipetab)/(volumetitranab)
+            csampelab=round((cprimerab*volumepipetab)/(volumetitranab),6)
             st.info(f'Kadar Hasil Titrasi {titranasba}: {csampelab}')
 #Iodometri    
     elif option=='Iodometri':
