@@ -29,7 +29,7 @@ with tab2:
     bmmolar=st.number_input("Masukkan BM/Ar Bahan", format = "%.1f")
     volumbahan=st.number_input("Volume Larutan(L) Molaritas", format = "%.3f")
     if st.button('Molaritas'):
-        molaritas=round(((jmlbahan)/(bmmolar))/(volumbahan),5)
+        molaritas=round(((jmlbahan)/(bmmolar))/(volumbahan),6)
         st.info(f'Molaritas dari {namabahan}: {molaritas} M ; (mol/L) ; (mmol/mL)')
     
 with tab3:
@@ -40,7 +40,7 @@ with tab3:
     benormal=st.number_input("Masukkan BE Bahan", format = "%.1f")
     volumbahan=st.number_input("Volume Larutan(L) Normalitas", format = "%.3f")
     if st.button('Normalitas'):
-        normalitas=((jmlbahan)/(benormal))/(volumbahan)
+        normalitas=round(((jmlbahan)/(benormal))/(volumbahan),6)
         st.info(f'Normalitas dari {namabahan}: {normalitas} N ; (grek/L) ; (mgrek/mL)')
     
 with tab4:
@@ -60,7 +60,7 @@ with tab5:
     beratbahan=st.number_input("Berat Bahan(g)", format = "%.4f")
     beratlar=st.number_input("Berat Larutan(g)", format = "%.4f")
     if st.button('Persen Berat'):
-        pberat=((beratbahan)/(beratlar)*100)
+        pberat=round(((beratbahan)/(beratlar)*100),6)
         st.info(f'Persen Berat dari {namabahan}: {pberat}% (b/b)')
 
 with tab6:
@@ -70,7 +70,7 @@ with tab6:
     volumebahan=st.number_input("Volume Bahan(mL)", format = "%.3f")
     volumebahan=st.number_input("VolumeLarutan(L)", format = "%.3f")
     if st.button('Persen Volume'):
-        pvolume=((volumebahan)/(volumebahan)*100)
+        pvolume=round(((volumebahan)/(volumebahan)*100),6)
         st.info(f'Persen Volume dari {namabahan}: {pvolume}% (v/V)')
         
 with tab7:
@@ -80,7 +80,7 @@ with tab7:
     massbahan=st.number_input("Massa Bahan(g) b/v", format = "%.4f")
     volbahan=st.number_input("Volume Bahan b/v", format = "%.3f")
     if st.button('Persen Berat per Volume'):
-        bv=((massbahan)/(volbahan)*100)
+        bv=round(((massbahan)/(volbahan)*100),6)
         st.info(f'Persen Berat per Volume dari {bahan}: {bv}% (b/V)')
         
 with tab8:
