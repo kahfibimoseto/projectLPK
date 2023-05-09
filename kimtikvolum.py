@@ -231,17 +231,17 @@ with tab8:
             bmbeprimerag=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Argentometri", min_value=0.1, max_value=None, format = "%.1f")
             volumeprimerag=st.number_input("Volume Labu Takar(L) Argentometri", min_value=0.01, max_value=None, format = "%.3f")
         
-            cprimerag=((massaprimerag)/(bmbeprimerag))/(volumeprimerag)
+            cprimerag=round(((massaprimerag)/(bmbeprimerag))/(volumeprimerag),6)
         
             if st.button('Konsentrasi Standar Primer'):
-                cprimer=((massaprimerag)/(bmbeprimerag))/(volumeprimerag)
+                cprimer=round(((massaprimerag)/(bmbeprimerag))/(volumeprimerag),6)
                 st.info(f'Konsentrasi dari {namaprimerag}: {cprimerag}')
             st.divider()
         
             st.write('''
             :violet[_Informasi Titrasi_]
             ''')
-            volumetitranag=st.number_input("Volume Titran(mL)")
+            volumetitranag=st.number_input("Volume Titran(mL)", format="%.3f")
             volumepipetag=st.number_input("Volume Standar Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimerag} : {cprimerag}'
             if st.button('hasil titrasi'):
