@@ -148,7 +148,7 @@ with tab8:
     
             st.write(':violet[_Informasi Penggunaan Bahan Primer_]')
             namaprimerio=st.text_input("Bahan Standar Baku Primer Iodometri")
-            massaprimerio=st.number_input("Massa Standar Baku Primer(g) Iodometri", min_value=0.0001, max_value=None)
+            massaprimerio=st.number_input("Massa Standar Baku Primer(g) Iodometri", min_value=0.0001, max_value=None, format = "%.5f")
             bmbeprimerio=st.number_input("BM(untuk molaritas)/BE(untuk normalitas) Standar Baku Primer Iodometri", min_value=0.1, max_value=None)
             volumeprimerio=st.number_input("Volume Labu Takar(L) Iodometri", min_value=0.01, max_value=None)
        
