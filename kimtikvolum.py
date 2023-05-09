@@ -124,7 +124,7 @@ with tab8:
         :violet[_Informasi Titrasi_]
         ''')
         titranasba=st.text_input("Nama Titran Asam Basa")
-        volumetitranab=st.number_input("Volume Titran(mL)")
+        volumetitranab=st.number_input("Volume Titran(mL)", format=%.3f")
         volumepipetab=st.number_input("Volume Standar Yang Dipipet(mL)")
         f'konsentrasi larutan baku primer {namaprimerab} : {cprimerab}'
         if st.button('hasil titrasi'):
