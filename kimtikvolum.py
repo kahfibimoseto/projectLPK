@@ -162,7 +162,7 @@ with tab8:
             st.write('''
                 :violet[_Informasi Titrasi_]
                 ''')
-            volumetitranio=st.number_input("Volume Titran Iodometri(mL)", format=%.3f")
+            volumetitranio=st.number_input("Volume Titran Iodometri(mL)", format="%.3f")
             volumepipetio=st.number_input(f"Volume {namaprimerio} Yang Dipipet(mL)")
             f'konsentrasi larutan baku primer {namaprimerio} : {cprimerio}'
             if st.button('hasil titrasi iodo'):
